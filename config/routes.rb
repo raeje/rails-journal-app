@@ -7,4 +7,10 @@ Rails.application.routes.draw do
   post "/categories" => "categories#create"
 
   get "/categories/:id" => "categories#show", as: "category"
+
+  delete "/categories/:id" => "categories#delete"
+
+  get "/categories/:id/edit" => "categories#edit"
+
+  patch "/categories/:id" => "categories#update"
 end

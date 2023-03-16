@@ -36,4 +36,11 @@ class CategoriesControllerTest < ActionDispatch::IntegrationTest
     assert_response :success
   end
 
+  test "should get delete" do
+    delete category_path(@category)
+    assert_response :redirect
+    follow_redirect!
+    assert_response :success
+  end
+
 end
