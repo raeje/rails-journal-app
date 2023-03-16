@@ -13,4 +13,7 @@ Rails.application.routes.draw do
   get "/categories/:id/edit" => "categories#edit"
 
   patch "/categories/:id" => "categories#update"
+
+  # tasks routes
+
 end
