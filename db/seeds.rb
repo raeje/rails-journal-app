@@ -6,11 +6,18 @@
 #   movies = Movie.create([{ name: "Star Wars" }, { name: "Lord of the Rings" }])
 #   Character.create(name: "Luke", movie: movies.first)
 
-# Category seeds
-Category.create!(
+# create Category and Task
+c = Category.create!(
   name: "Work",
   description: "work stuff activities"
 )
+=begin
+t = Task.create!(
+  name: "meh",
+  description: "...",
+  category_id: c.id
+)
+=end
 
 Category.create!(
   name: "Social",
