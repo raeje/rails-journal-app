@@ -2,18 +2,20 @@ Rails.application.routes.draw do
   # categories routes
   get "/categories" => "categories#index"
 
-  get "/categories/new" => "categories#new"
-
   post "/categories" => "categories#create"
 
-  get "/categories/:id" => "categories#show", as: "category"
-
-  delete "/categories/:id" => "categories#delete"
+  get "/categories/new" => "categories#new"
 
   get "/categories/:id/edit" => "categories#edit"
 
+  get "/categories/:id" => "categories#show", as: "category"
+
   patch "/categories/:id" => "categories#update"
 
-  # tasks routes
+  delete "/categories/:id" => "categories#delete"
 
+  # nested tasks routes
+  get "/categories/:categories_id/tasks" => "tasks#index"
+
+  get "/categories/:categories_id/tasks/:id" => "tasks#show", as: "task"
 end

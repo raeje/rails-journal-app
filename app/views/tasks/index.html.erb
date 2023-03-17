@@ -1,0 +1,14 @@
+<h1> Category Tasks View </h1>
+<div>
+  Category Name: <%= @category.name %>
+</div>
+
+<div>
+  Tasks: <br />
+  <% @category.tasks.each do |task| %>
+    <p>Task Name: <%= task.name %></p>
+    <p>Task description: <%= task.description %></p>
+  <% end %>
+</div>
+
+<h2> This should be the end </h2>
