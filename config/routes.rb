@@ -21,4 +21,5 @@ Rails.application.routes.draw do
 
   get "/categories/:categories_id/tasks/:id/edit" => "tasks#edit", as: "task_edit"
 
+  patch "/categories/:categories_id/tasks/:id" => "tasks#update"
 end

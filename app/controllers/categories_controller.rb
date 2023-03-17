@@ -36,7 +36,7 @@ class CategoriesController < ApplicationController
   end
 
   def update
-    @category = Category.find(params[:id])
+    @category = Category.find(params[:id]).tasks
 
     if @category.update(category_params)
       redirect_to category_url(category_params), notice: "Category was successfully updated."

@@ -1,5 +1,8 @@
 <h1>Edit task</h1>
-<%= form_with(model: @task) do |form| %>
+
+<%= form_with(model: [@task], local: true) do |form| %>
+  <%= @task.category_id %>
+  <br/><br/>
   <div>Task name: <%= form.text_field :name %></div>
   <div>Task description: <%= form.text_field :description %></div>
   <%= form.submit %>
