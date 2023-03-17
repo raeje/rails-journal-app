@@ -18,4 +18,7 @@ Rails.application.routes.draw do
   get "/categories/:categories_id/tasks" => "tasks#index"
 
   get "/categories/:categories_id/tasks/:id" => "tasks#show", as: "task"
+
+  get "/categories/:categories_id/tasks/:id/edit" => "tasks#edit", as: "task_edit"
+
 end

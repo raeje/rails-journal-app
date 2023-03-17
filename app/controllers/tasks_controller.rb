@@ -8,7 +8,7 @@ class TasksController < ApplicationController
   end
 
   def edit
-
+    @task = Category.find(params[:categories_id]).tasks.find(params[:id])
   end
 
 end

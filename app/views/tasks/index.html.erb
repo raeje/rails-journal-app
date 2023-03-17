@@ -6,8 +6,10 @@
 <div>
   Tasks: <br />
   <% @category.tasks.each do |task| %>
-    <p>Task Name: <%= task.name %></p>
-    <p>Task description: <%= task.description %></p>
+    <p><%= link_to "Edit", task_edit_url(task.category_id, task.id) %>
+
+    Task Name: <%= task.name %> -- Task description: <%= task.description %></p>
+    <br/>
   <% end %>
 </div>
 
